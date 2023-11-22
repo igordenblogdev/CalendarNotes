@@ -234,6 +234,9 @@ function activesBtn(keyLocalStorage) {
 // Функция записи в LocalStorage
 function createNote(keyLocalStorage) {
     createBtn.onclick = function () {
+         if(inputNote.value.length === 0 ) {
+            return
+        }
         // Создаем новый обьект заметки
         const newNote = {
             titleNote: inputNote.value,
